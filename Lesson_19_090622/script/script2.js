@@ -3,7 +3,7 @@
 // Зарплата рассчитывается через умножение ставки на количество дней. 
 // Карточки должны включать отображение фотографии. 
 // Примените стили к карточкам: 
-// width, padding, border, background-color.
+// width, padding, border, background-color
 
 
 const workers = [
@@ -86,3 +86,5 @@ const workers = [
       container.append(idElem, firstNameElem, lastNameElem, ageElem, salaryElem, photoElem, emailElem);  
       rootElem.append(container);
     })
+
+    //new comment
