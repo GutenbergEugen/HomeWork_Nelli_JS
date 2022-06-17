@@ -80,7 +80,9 @@ const workers = [
         photoElem.setAttribute('alt', "photo of worker");
         //<img src="ссылка" alt="альтернативный текст">
         
-        emailElem.setAttribute('href', `mailto:${email}`);
+        container.classList.add('container'); //добавляем к контейнеру класс container
+
+        // emailElem.setAttribute('href', `mailto:${email}`);
         //<a href="mailto:email"></a>   //формат записи эл почты
 
       container.append(idElem, firstNameElem, lastNameElem, ageElem, salaryElem, photoElem, emailElem);  
