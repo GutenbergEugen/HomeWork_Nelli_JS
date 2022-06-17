@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#root{
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.product{
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
