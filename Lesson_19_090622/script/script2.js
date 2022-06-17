@@ -58,7 +58,7 @@ const workers = [
 
   const rootElem = document.querySelector('#root');
 
-  workers.forEach(function({id, first_name, last_name, age, rate, days, photo, email}){
+  workers.forEach(function({id, first_name, last_name, age, rate, days, photo, email, progress}){
       const container = document.createElement('div');
       const idElem = document.createElement('p');
       const firstNameElem = document.createElement('p');
@@ -67,12 +67,16 @@ const workers = [
       const salaryElem = document.createElement('p');
       const photoElem = document.createElement('img');
       const emailElem = document.createElement('a');
+      const progressContainer = document.createElement('div');//создаем div
+      const progressLine = document.createElement('div');//создаем div
+      const progressValue = document.createElement('p');
   
         idElem.innerText = `ID: ${id}`;
         firstNameElem.innerText = `First name: ${first_name}`;
         lastNameElem.innerText = `Last name: ${last_name}`;
         ageElem.innerText = `Age: ${age}`;
         salaryElem.innerText = `Salary: ${rate * days}`;
+        progressValue.innerText = progress + '%';
         emailElem.innerText = email;
         
     
@@ -81,11 +85,16 @@ const workers = [
         //<img src="ссылка" alt="альтернативный текст">
         
         container.classList.add('container'); //добавляем к контейнеру класс container
+        progressContainer.classList.add('progress-container'); //добавляем класс
+        progressLine.classList.add('progress-line');
+        progressValue.classList.add('progress-value');
+        progressLine.style.width = progress + '%'; //добавляем стиль
 
         // emailElem.setAttribute('href', `mailto:${email}`);
         //<a href="mailto:email"></a>   //формат записи эл почты
 
-      container.append(idElem, firstNameElem, lastNameElem, ageElem, salaryElem, photoElem, emailElem);  
+      progressContainer.append(progressLine, progressValue,); //добавляем в контейнер progressLine
+      container.append(idElem, firstNameElem, lastNameElem, ageElem, salaryElem, photoElem, emailElem, progressContainer);  
       rootElem.append(container);
     })
 

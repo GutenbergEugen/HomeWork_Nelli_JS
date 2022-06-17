@@ -10,3 +10,23 @@
     border: 1px solid black;
     background: beige;
 }
+
+.progress-container {
+    position: relative;
+    border: 1px solid black;
+    height: 20px;
+}
+
+    /* накладываем второй div */
+.progress-line {
+    position: absolute;
+    background-color: gray;
+    height: 100%;
+    width: 50%;
+}
+
+.progress-value{
+    position: absolute;
+    text-align: center;
+    width: 200px;
+}
