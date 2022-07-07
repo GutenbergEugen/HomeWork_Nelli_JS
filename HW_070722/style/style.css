@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn_size{
+    margin: 20px;
+}
+
+.btn_color{
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+    border: 2px solid black;
+}
+
+.btn_bones{
+    margin: 20px;
+    width: 90px;
+    height: 30px;
+    background-color: aliceblue;
+    border: 2px solid black;
+}

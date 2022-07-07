@@ -16,7 +16,7 @@ const workers = [
       days: 15,
       photo: "https://reqres.in/img/faces/12-image.jpg",
       email: "hello@gmail.com",
-      progress: 50
+      progress: 95
     },
   
     {
@@ -67,9 +67,9 @@ const workers = [
       const salaryElem = document.createElement('p');
       const photoElem = document.createElement('img');
       const emailElem = document.createElement('a');
-      const progressContainer = document.createElement('div');//создаем div
-      const progressLine = document.createElement('div');//создаем div
-      const progressValue = document.createElement('p');
+      const progressContainer = document.createElement('div');//создаем пустой статичный div
+      const progressLine = document.createElement('div');//создаем div для цветной линии заполнения
+      const progressValue = document.createElement('p');//создаем параграф для процентов заполнения
   
         idElem.innerText = `ID: ${id}`;
         firstNameElem.innerText = `First name: ${first_name}`;
@@ -88,7 +88,7 @@ const workers = [
         progressContainer.classList.add('progress-container'); //добавляем класс
         progressLine.classList.add('progress-line');
         progressValue.classList.add('progress-value');
-        progressLine.style.width = progress + '%'; //добавляем стиль
+        progressLine.style.width = progress + '%'; //добавляем стиль: ширина в зависимости от заполненности
 
         // emailElem.setAttribute('href', `mailto:${email}`);
         //<a href="mailto:email"></a>   //формат записи эл почты
